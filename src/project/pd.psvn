@@ -1,0 +1,44 @@
+# This file was created by the abstractor program.
+# The source PSVN file was: p.psvn
+# The abstraction used is stored in file: pd.abst
+
+DOMAIN COLOUR 8
+  B 1 2 3 4 5 6 7
+
+8
+COLOUR COLOUR COLOUR COLOUR COLOUR COLOUR COLOUR COLOUR
+
+B - - - - - - - => B - - - - - - - LABEL 1_IZQUIERDA COST 1
+B - - - - - - - => B - - - - - - - LABEL 1_ARRIBA COST 1
+B - - - A - - - => A - - - B - - - LABEL 1_ABAJO COST 1
+B A - - - - - - => A B - - - - - - LABEL 1_DERECHA COST 1
+A B - - - - - - => B A - - - - - - LABEL 2_IZQUIERDA COST 1
+- B - - - - - - => - B - - - - - - LABEL 2_ARRIBA COST 1
+- B - - - A - - => - A - - - B - - LABEL 2_ABAJO COST 1
+- B A - - - - - => - - A B - - - - LABEL 2_DERECHA COST 1
+- A B - - - - - => - B A - - - - - LABEL 3_IZQUIERDA COST 1
+- - B - - - - - => - - B - - - - - LABEL 3_ARRIBA COST 1
+- - B - - - A - => - - A - - - B - LABEL 3_ABAJO COST 1
+- - B A - - - - => - - A B - - - - LABEL 3_DERECHA COST 1
+- - A B - - - - => - - B A - - - - LABEL 4_IZQUIERDA COST 1
+- - - B - - - - => - - - B - - - - LABEL 4_ARRIBA COST 1
+- - - B - - - A => - - - A - - - B LABEL 4_ABAJO COST 1
+- - - B A - - - => - - - A B - - - LABEL 4_DERECHA COST 1
+- - - A B - - - => - - - B A - - - LABEL 5_IZQUIERDA COST 1
+A - - - B - - - => B - - - A - - - LABEL 5_ARRIBA COST 1
+- - - - B - - - => - - - - B - - - LABEL 5_ABAJO COST 1
+- - - - B A - - => - - - - A B - - LABEL 5_DERECHA COST 1
+- - - - A B - - => - - - - B A - - LABEL 6_IZQUIERDA COST 1
+- A - - - B - - => - B - - - A - - LABEL 6_ARRIBA COST 1
+- - - - - B - - => - - - - - B - - LABEL 6_ABAJO COST 1
+- - - - - B A - => - - - - - A B - LABEL 6_DERECHA COST 1
+- - - - - A B - => - - - - - B A - LABEL 7_IZQUIERDA COST 1
+- - A - - - B - => - - B - - - A - LABEL 7_ARRIBA COST 1
+- - - - - - B - => - - - - - - B - LABEL 7_ABAJO COST 1
+- - - - - - B A => - - - - - - A B LABEL 7_DERECHA COST 1
+- - - - - - A B => - - - - - - B A LABEL 8_IZQUIERDA COST 1
+- - - A - - - B => - - - B - - - A LABEL 8_ARRIBA COST 1
+- - - - - - - B => - - - - - - - B LABEL 8_ABAJO COST 1
+- - - - - - - B => - - - - - - - B LABEL 8_DERECHA COST 1
+
+GOAL 1 2 3 4 5 6 7 B
