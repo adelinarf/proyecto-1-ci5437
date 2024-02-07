@@ -63,7 +63,7 @@ abstractor:
 	@rm -f $*.c
 
 %.bfs:  %.c
-	$(CC) bfs.c BFSAlgorithm.c -include $< -o $@
+	$(CXX) bfs.cpp BFSAlgorithm.cpp -include $< -o $@
 
 .PHONY: clean
 clean:
