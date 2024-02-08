@@ -62,6 +62,9 @@ abstractor:
 	@$(CXX) $(OPT) ${BASE_FOLDER}/global/dist_pdb.cpp -include $< -o $@
 	@rm -f $*.c
 
+%.ida:  %.c ./IDA.hpp
+	$(CXX) $(OPT) IDA_Algorithm.cpp -include $< -include ida.cpp -o $@
+
 %.bfs:  %.c
 	$(CXX) bfs.cpp BFSAlgorithm.cpp -include $< -o $@
 
