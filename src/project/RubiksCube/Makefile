@@ -4,9 +4,11 @@
 
 CC = gcc
 CXX = g++ -std=c++17
+CXL = g++ -std=c++2a
 OPT = -Wall -O3 -Wno-unused-function -Wno-unused-variable
 PSVNOPT = --state_map --backward_moves --fwd_history_len=0 --bwd_history_len=0
-BASE_FOLDER = ../psvn-for-ci5437
+BASE_FOLDER = ../../psvn-for-ci5437
+ALGORITHMS_FOLDER = ../Algoritmos
 
 psvn2c_core.c:
 	@cp ${BASE_FOLDER}/src/psvn2c_core.c ./psvn2c_core.c
@@ -48,6 +50,7 @@ abstractor:
 	@echo "**** Constructing abstractor ..."
 	@$(CXX) $(OPT) ${BASE_FOLDER}/src/abstractor.cpp ${BASE_FOLDER}/src/psvn.cpp -o $@
 
+
 %.pdb: abstractor
 	@rm -f `basename $*`.abst `basename $*`.pdb `basename $*`.psvn
 	@echo "**** Running abstractor on `dirname $*`.psvn with `basename $*`.txt ..."
@@ -62,11 +65,28 @@ abstractor:
 	@$(CXX) $(OPT) ${BASE_FOLDER}/global/dist_pdb.cpp -include $< -o $@
 	@rm -f $*.c
 
-%.ida:  %.c ./IDA.hpp
-	$(CXX) $(OPT) IDA_Algorithm.cpp -include $< -include ida.cpp -o $@
+%.astar: %.c
+	$(CXL) ${ALGORITHMS_FOLDER}/A_Star/astar.cpp ${ALGORITHMS_FOLDER}/A_Star/AStarAlgorithm.cpp -include $< -o $@
+
+%.ida:  %.c
+	$(CXX) $(OPT) ${ALGORITHMS_FOLDER}/IDA/ida.cpp -include $< ${ALGORITHMS_FOLDER}/IDA/IDA_Algorithm.cpp -o $@
 
 %.bfs:  %.c
-	$(CXX) bfs.cpp BFSAlgorithm.cpp -include $< -o $@
+	$(CXL) ${ALGORITHMS_FOLDER}/BFS/bfs.cpp ${ALGORITHMS_FOLDER}/BFS/BFSAlgorithm.cpp -include $< -o $@
+
+all:
+	@make abstractor
+	@make rubik3Sticker/rubik3x3.pdb
+	@make rubik3Sticker.c
+
+bfs:
+	@make rubik3Sticker.bfs 
+
+astar:
+	@make rubik3Sticker.astar
+
+ida:
+	@make rubik3Sticker.ida
 
 .PHONY: clean
 clean:

@@ -1,0 +1,100 @@
+# 24-PUZZLE
+
+DOMAIN square 25                                                               # dominio square de 25 cttes
+       B 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 2B 21 22 23 24      
+
+25                                                                           # vector de tamano 25
+
+square square square square square square square square square square square square square square square square square square square square square square square square square
+
+# squares 
+# B  1  2  3  4
+# 5  6  7  8  9
+# 10 11 12 13 14
+# 15 16 17 18 19
+# 2B 21 22 23 24
+
+# Reglas
+
+B - - - - A - - - - - - - - - - - - - - - - - - - => A - - - - B - - - - - - - - - - - - - - - - - - - LABEL mover_abajo_1
+B A - - - - - - - - - - - - - - - - - - - - - - - => A B - - - - - - - - - - - - - - - - - - - - - - - LABEL mover_derecha_1
+- B - - - - A - - - - - - - - - - - - - - - - - - => - A - - - - B - - - - - - - - - - - - - - - - - - LABEL mover_abajo_2
+A B - - - - - - - - - - - - - - - - - - - - - - - => B A - - - - - - - - - - - - - - - - - - - - - - - LABEL mover_izquierda_2
+- B A - - - - - - - - - - - - - - - - - - - - - - => - A B - - - - - - - - - - - - - - - - - - - - - - LABEL mover_derecha_2
+- - B - - - - A - - - - - - - - - - - - - - - - - => - - A - - - - B - - - - - - - - - - - - - - - - - LABEL mover_abajo_3
+- A B - - - - - - - - - - - - - - - - - - - - - - => - B A - - - - - - - - - - - - - - - - - - - - - - LABEL mover_izquierda_3
+- - B A - - - - - - - - - - - - - - - - - - - - - => - - A B - - - - - - - - - - - - - - - - - - - - - LABEL mover_derecha_3
+- - - B - - - - A - - - - - - - - - - - - - - - - => - - - A - - - - B - - - - - - - - - - - - - - - - LABEL mover_abajo_4
+- - A B - - - - - - - - - - - - - - - - - - - - - => - - B A - - - - - - - - - - - - - - - - - - - - - LABEL mover_izquierda_4
+- - - B A - - - - - - - - - - - - - - - - - - - - => - - - A B - - - - - - - - - - - - - - - - - - - - LABEL mover_derecha_4
+- - - - B - - - - A - - - - - - - - - - - - - - - => - - - - A - - - - B - - - - - - - - - - - - - - - LABEL mover_abajo_5
+- - - A B - - - - - - - - - - - - - - - - - - - - => - - - B A - - - - - - - - - - - - - - - - - - - - LABEL mover_izquierda_5
+A - - - - B - - - - - - - - - - - - - - - - - - - => B - - - - A - - - - - - - - - - - - - - - - - - - LABEL mover_arriba_6
+- - - - - B - - - - A - - - - - - - - - - - - - - => - - - - - A - - - - B - - - - - - - - - - - - - - LABEL mover_abajo_6
+- - - - - B A - - - - - - - - - - - - - - - - - - => - - - - - A B - - - - - - - - - - - - - - - - - - LABEL mover_derecha_6
+- A - - - - B - - - - - - - - - - - - - - - - - - => - B - - - - A - - - - - - - - - - - - - - - - - - LABEL mover_arriba_7
+- - - - - - B - - - - A - - - - - - - - - - - - - => - - - - - - A - - - - B - - - - - - - - - - - - - LABEL mover_abajo_7
+- - - - - A B - - - - - - - - - - - - - - - - - - => - - - - - B A - - - - - - - - - - - - - - - - - - LABEL mover_izquierda_7
+- - - - - - B A - - - - - - - - - - - - - - - - - => - - - - - - A B - - - - - - - - - - - - - - - - - LABEL mover_derecha_7
+- - A - - - - B - - - - - - - - - - - - - - - - - => - - B - - - - A - - - - - - - - - - - - - - - - - LABEL mover_arriba_8
+- - - - - - - B - - - - A - - - - - - - - - - - - => - - - - - - - A - - - - B - - - - - - - - - - - - LABEL mover_abajo_8
+- - - - - - A B - - - - - - - - - - - - - - - - - => - - - - - - B A - - - - - - - - - - - - - - - - - LABEL mover_izquierda_8
+- - - - - - - B A - - - - - - - - - - - - - - - - => - - - - - - - A B - - - - - - - - - - - - - - - - LABEL mover_derecha_8
+- - - A - - - - B - - - - - - - - - - - - - - - - => - - - B - - - - A - - - - - - - - - - - - - - - - LABEL mover_arriba_9
+- - - - - - - - B - - - - A - - - - - - - - - - - => - - - - - - - - A - - - - B - - - - - - - - - - - LABEL mover_abajo_9
+- - - - - - - A B - - - - - - - - - - - - - - - - => - - - - - - - B A - - - - - - - - - - - - - - - - LABEL mover_izquierda_9
+- - - - - - - - B A - - - - - - - - - - - - - - - => - - - - - - - - A B - - - - - - - - - - - - - - - LABEL mover_derecha_9
+- - - - A - - - - B - - - - - - - - - - - - - - - => - - - - B - - - - A - - - - - - - - - - - - - - - LABEL mover_arriba_1B
+- - - - - - - - - B - - - - A - - - - - - - - - - => - - - - - - - - - A - - - - B - - - - - - - - - - LABEL mover_abajo_1B
+- - - - - - - - A B - - - - - - - - - - - - - - - => - - - - - - - - B A - - - - - - - - - - - - - - - LABEL mover_izquierda_1B
+- - - - - A - - - - B - - - - - - - - - - - - - - => - - - - - B - - - - A - - - - - - - - - - - - - - LABEL mover_arriba_11
+- - - - - - - - - - B - - - - A - - - - - - - - - => - - - - - - - - - - A - - - - B - - - - - - - - - LABEL mover_abajo_11
+- - - - - - - - - - B A - - - - - - - - - - - - - => - - - - - - - - - - A B - - - - - - - - - - - - - LABEL mover_derecha_11
+- - - - - - A - - - - B - - - - - - - - - - - - - => - - - - - - B - - - - A - - - - - - - - - - - - - LABEL mover_arriba_12
+- - - - - - - - - - - B - - - - A - - - - - - - - => - - - - - - - - - - - A - - - - B - - - - - - - - LABEL mover_abajo_12
+- - - - - - - - - - A B - - - - - - - - - - - - - => - - - - - - - - - - B A - - - - - - - - - - - - - LABEL mover_izquierda_12
+- - - - - - - - - - - B A - - - - - - - - - - - - => - - - - - - - - - - - A B - - - - - - - - - - - - LABEL mover_derecha_12
+- - - - - - - A - - - - B - - - - - - - - - - - - => - - - - - - - B - - - - A - - - - - - - - - - - - LABEL mover_arriba_13
+- - - - - - - - - - - - B - - - - A - - - - - - - => - - - - - - - - - - - - A - - - - B - - - - - - - LABEL mover_abajo_13
+- - - - - - - - - - - A B - - - - - - - - - - - - => - - - - - - - - - - - B A - - - - - - - - - - - - LABEL mover_izquierda_13
+- - - - - - - - - - - - B A - - - - - - - - - - - => - - - - - - - - - - - - A B - - - - - - - - - - - LABEL mover_derecha_13
+- - - - - - - - A - - - - B - - - - - - - - - - - => - - - - - - - - B - - - - A - - - - - - - - - - - LABEL mover_arriba_14
+- - - - - - - - - - - - - B - - - - A - - - - - - => - - - - - - - - - - - - - A - - - - B - - - - - - LABEL mover_abajo_14
+- - - - - - - - - - - - A B - - - - - - - - - - - => - - - - - - - - - - - - B A - - - - - - - - - - - LABEL mover_izquierda_14
+- - - - - - - - - - - - - B A - - - - - - - - - - => - - - - - - - - - - - - - A B - - - - - - - - - - LABEL mover_derecha_14
+- - - - - - - - - A - - - - B - - - - - - - - - - => - - - - - - - - - B - - - - A - - - - - - - - - - LABEL mover_arriba_15
+- - - - - - - - - - - - - - B - - - - A - - - - - => - - - - - - - - - - - - - - A - - - - B - - - - - LABEL mover_abajo_15
+- - - - - - - - - - - - - A B - - - - - - - - - - => - - - - - - - - - - - - - B A - - - - - - - - - - LABEL mover_izquierda_15
+- - - - - - - - - - A - - - - B - - - - - - - - - => - - - - - - - - - - B - - - - A - - - - - - - - - LABEL mover_arriba_16
+- - - - - - - - - - - - - - - B - - - - A - - - - => - - - - - - - - - - - - - - - A - - - - B - - - - LABEL mover_abajo_16
+- - - - - - - - - - - - - - - B A - - - - - - - - => - - - - - - - - - - - - - - - A B - - - - - - - - LABEL mover_derecha_16
+- - - - - - - - - - - A - - - - B - - - - - - - - => - - - - - - - - - - - B - - - - A - - - - - - - - LABEL mover_arriba_17
+- - - - - - - - - - - - - - - - B - - - - A - - - => - - - - - - - - - - - - - - - - A - - - - B - - - LABEL mover_abajo_17
+- - - - - - - - - - - - - - - A B - - - - - - - - => - - - - - - - - - - - - - - - B A - - - - - - - - LABEL mover_izquierda_17
+- - - - - - - - - - - - - - - - B A - - - - - - - => - - - - - - - - - - - - - - - - A B - - - - - - - LABEL mover_derecha_17
+- - - - - - - - - - - - A - - - - B - - - - - - - => - - - - - - - - - - - - B - - - - A - - - - - - - LABEL mover_arriba_18
+- - - - - - - - - - - - - - - - - B - - - - A - - => - - - - - - - - - - - - - - - - - A - - - - B - - LABEL mover_abajo_18
+- - - - - - - - - - - - - - - - A B - - - - - - - => - - - - - - - - - - - - - - - - B A - - - - - - - LABEL mover_izquierda_18
+- - - - - - - - - - - - - - - - - B A - - - - - - => - - - - - - - - - - - - - - - - - A B - - - - - - LABEL mover_derecha_18
+- - - - - - - - - - - - - A - - - - B - - - - - - => - - - - - - - - - - - - - B - - - - A - - - - - - LABEL mover_arriba_19
+- - - - - - - - - - - - - - - - - - B - - - - A - => - - - - - - - - - - - - - - - - - - A - - - - B - LABEL mover_abajo_19
+- - - - - - - - - - - - - - - - - A B - - - - - - => - - - - - - - - - - - - - - - - - B A - - - - - - LABEL mover_izquierda_19
+- - - - - - - - - - - - - - - - - - B A - - - - - => - - - - - - - - - - - - - - - - - - A B - - - - - LABEL mover_derecha_19
+- - - - - - - - - - - - - - A - - - - B - - - - - => - - - - - - - - - - - - - - B - - - - A - - - - - LABEL mover_arriba_2B
+- - - - - - - - - - - - - - - - - - - B - - - - A => - - - - - - - - - - - - - - - - - - - A - - - - B LABEL mover_abajo_2B
+- - - - - - - - - - - - - - - - - - A B - - - - - => - - - - - - - - - - - - - - - - - - B A - - - - - LABEL mover_izquierda_2B
+- - - - - - - - - - - - - - - A - - - - B - - - - => - - - - - - - - - - - - - - - B - - - - A - - - - LABEL mover_arriba_21
+- - - - - - - - - - - - - - - - - - - - B A - - - => - - - - - - - - - - - - - - - - - - - - A B - - - LABEL mover_derecha_21
+- - - - - - - - - - - - - - - - A - - - - B - - - => - - - - - - - - - - - - - - - - B - - - - A - - - LABEL mover_arriba_22
+- - - - - - - - - - - - - - - - - - - - A B - - - => - - - - - - - - - - - - - - - - - - - - B A - - - LABEL mover_izquierda_22
+- - - - - - - - - - - - - - - - - - - - - B A - - => - - - - - - - - - - - - - - - - - - - - - A B - - LABEL mover_derecha_22
+- - - - - - - - - - - - - - - - - A - - - - B - - => - - - - - - - - - - - - - - - - - B - - - - A - - LABEL mover_arriba_23
+- - - - - - - - - - - - - - - - - - - - - A B - - => - - - - - - - - - - - - - - - - - - - - - B A - - LABEL mover_izquierda_23
+- - - - - - - - - - - - - - - - - - - - - - B A - => - - - - - - - - - - - - - - - - - - - - - - A B - LABEL mover_derecha_23
+- - - - - - - - - - - - - - - - - - A - - - - B - => - - - - - - - - - - - - - - - - - - B - - - - A - LABEL mover_arriba_24
+- - - - - - - - - - - - - - - - - - - - - - A B - => - - - - - - - - - - - - - - - - - - - - - - B A - LABEL mover_izquierda_24
+- - - - - - - - - - - - - - - - - - - - - - - B A => - - - - - - - - - - - - - - - - - - - - - - - A B LABEL mover_derecha_24
+- - - - - - - - - - - - - - - - - - - A - - - - B => - - - - - - - - - - - - - - - - - - - B - - - - A LABEL mover_arriba_25
+- - - - - - - - - - - - - - - - - - - - - - - A B => - - - - - - - - - - - - - - - - - - - - - - - B A LABEL mover_izquierda_25
+
+GOAL 1 2 3 4 5 6 7 8 9 1B 11 12 13 14 15 16 17 18 19 2B 21 22 23 24 B

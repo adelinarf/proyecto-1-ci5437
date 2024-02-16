@@ -10,10 +10,7 @@
 
 int main(int argc, char **argv){
     state_t state; 
-    printf("EMPIEZA\n");
-
     BFS(state);
     BFS_Prunning(state);
-
 	return 0;
 }

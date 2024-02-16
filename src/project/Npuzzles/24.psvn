@@ -1,0 +1,92 @@
+# This file was created by the abstractor program.
+# The source PSVN file was: 24_puzzle.psvn
+# The abstraction used is stored in file: 24.abst
+
+DOMAIN SQUARE 25
+  B 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 2B 21 22 23 24
+
+25
+SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE SQUARE
+
+B - - - - A - - - - - - - - - - - - - - - - - - - => A - - - - B - - - - - - - - - - - - - - - - - - - LABEL MOVER_ABAJO_1 COST 1
+B A - - - - - - - - - - - - - - - - - - - - - - - => A B - - - - - - - - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_1 COST 1
+- B - - - - A - - - - - - - - - - - - - - - - - - => - A - - - - B - - - - - - - - - - - - - - - - - - LABEL MOVER_ABAJO_2 COST 1
+A B - - - - - - - - - - - - - - - - - - - - - - - => B A - - - - - - - - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_2 COST 1
+- B A - - - - - - - - - - - - - - - - - - - - - - => - A B - - - - - - - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_2 COST 1
+- - B - - - - A - - - - - - - - - - - - - - - - - => - - A - - - - B - - - - - - - - - - - - - - - - - LABEL MOVER_ABAJO_3 COST 1
+- A B - - - - - - - - - - - - - - - - - - - - - - => - B A - - - - - - - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_3 COST 1
+- - B A - - - - - - - - - - - - - - - - - - - - - => - - A B - - - - - - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_3 COST 1
+- - - B - - - - A - - - - - - - - - - - - - - - - => - - - A - - - - B - - - - - - - - - - - - - - - - LABEL MOVER_ABAJO_4 COST 1
+- - A B - - - - - - - - - - - - - - - - - - - - - => - - B A - - - - - - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_4 COST 1
+- - - B A - - - - - - - - - - - - - - - - - - - - => - - - A B - - - - - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_4 COST 1
+- - - - B - - - - A - - - - - - - - - - - - - - - => - - - - A - - - - B - - - - - - - - - - - - - - - LABEL MOVER_ABAJO_5 COST 1
+- - - A B - - - - - - - - - - - - - - - - - - - - => - - - B A - - - - - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_5 COST 1
+A - - - - B - - - - - - - - - - - - - - - - - - - => B - - - - A - - - - - - - - - - - - - - - - - - - LABEL MOVER_ARRIBA_6 COST 1
+- - - - - B - - - - A - - - - - - - - - - - - - - => - - - - - A - - - - B - - - - - - - - - - - - - - LABEL MOVER_ABAJO_6 COST 1
+- - - - - B A - - - - - - - - - - - - - - - - - - => - - - - - A B - - - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_6 COST 1
+- A - - - - B - - - - - - - - - - - - - - - - - - => - B - - - - A - - - - - - - - - - - - - - - - - - LABEL MOVER_ARRIBA_7 COST 1
+- - - - - - B - - - - A - - - - - - - - - - - - - => - - - - - - A - - - - B - - - - - - - - - - - - - LABEL MOVER_ABAJO_7 COST 1
+- - - - - A B - - - - - - - - - - - - - - - - - - => - - - - - B A - - - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_7 COST 1
+- - - - - - B A - - - - - - - - - - - - - - - - - => - - - - - - A B - - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_7 COST 1
+- - A - - - - B - - - - - - - - - - - - - - - - - => - - B - - - - A - - - - - - - - - - - - - - - - - LABEL MOVER_ARRIBA_8 COST 1
+- - - - - - - B - - - - A - - - - - - - - - - - - => - - - - - - - A - - - - B - - - - - - - - - - - - LABEL MOVER_ABAJO_8 COST 1
+- - - - - - A B - - - - - - - - - - - - - - - - - => - - - - - - B A - - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_8 COST 1
+- - - - - - - B A - - - - - - - - - - - - - - - - => - - - - - - - A B - - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_8 COST 1
+- - - A - - - - B - - - - - - - - - - - - - - - - => - - - B - - - - A - - - - - - - - - - - - - - - - LABEL MOVER_ARRIBA_9 COST 1
+- - - - - - - - B - - - - A - - - - - - - - - - - => - - - - - - - - A - - - - B - - - - - - - - - - - LABEL MOVER_ABAJO_9 COST 1
+- - - - - - - A B - - - - - - - - - - - - - - - - => - - - - - - - B A - - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_9 COST 1
+- - - - - - - - B A - - - - - - - - - - - - - - - => - - - - - - - - A B - - - - - - - - - - - - - - - LABEL MOVER_DERECHA_9 COST 1
+- - - - A - - - - B - - - - - - - - - - - - - - - => - - - - B - - - - A - - - - - - - - - - - - - - - LABEL MOVER_ARRIBA_1B COST 1
+- - - - - - - - - B - - - - A - - - - - - - - - - => - - - - - - - - - A - - - - B - - - - - - - - - - LABEL MOVER_ABAJO_1B COST 1
+- - - - - - - - A B - - - - - - - - - - - - - - - => - - - - - - - - B A - - - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_1B COST 1
+- - - - - A - - - - B - - - - - - - - - - - - - - => - - - - - B - - - - A - - - - - - - - - - - - - - LABEL MOVER_ARRIBA_11 COST 1
+- - - - - - - - - - B - - - - A - - - - - - - - - => - - - - - - - - - - A - - - - B - - - - - - - - - LABEL MOVER_ABAJO_11 COST 1
+- - - - - - - - - - B A - - - - - - - - - - - - - => - - - - - - - - - - A B - - - - - - - - - - - - - LABEL MOVER_DERECHA_11 COST 1
+- - - - - - A - - - - B - - - - - - - - - - - - - => - - - - - - B - - - - A - - - - - - - - - - - - - LABEL MOVER_ARRIBA_12 COST 1
+- - - - - - - - - - - B - - - - A - - - - - - - - => - - - - - - - - - - - A - - - - B - - - - - - - - LABEL MOVER_ABAJO_12 COST 1
+- - - - - - - - - - A B - - - - - - - - - - - - - => - - - - - - - - - - B A - - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_12 COST 1
+- - - - - - - - - - - B A - - - - - - - - - - - - => - - - - - - - - - - - A B - - - - - - - - - - - - LABEL MOVER_DERECHA_12 COST 1
+- - - - - - - A - - - - B - - - - - - - - - - - - => - - - - - - - B - - - - A - - - - - - - - - - - - LABEL MOVER_ARRIBA_13 COST 1
+- - - - - - - - - - - - B - - - - A - - - - - - - => - - - - - - - - - - - - A - - - - B - - - - - - - LABEL MOVER_ABAJO_13 COST 1
+- - - - - - - - - - - A B - - - - - - - - - - - - => - - - - - - - - - - - B A - - - - - - - - - - - - LABEL MOVER_IZQUIERDA_13 COST 1
+- - - - - - - - - - - - B A - - - - - - - - - - - => - - - - - - - - - - - - A B - - - - - - - - - - - LABEL MOVER_DERECHA_13 COST 1
+- - - - - - - - A - - - - B - - - - - - - - - - - => - - - - - - - - B - - - - A - - - - - - - - - - - LABEL MOVER_ARRIBA_14 COST 1
+- - - - - - - - - - - - - B - - - - A - - - - - - => - - - - - - - - - - - - - A - - - - B - - - - - - LABEL MOVER_ABAJO_14 COST 1
+- - - - - - - - - - - - A B - - - - - - - - - - - => - - - - - - - - - - - - B A - - - - - - - - - - - LABEL MOVER_IZQUIERDA_14 COST 1
+- - - - - - - - - - - - - B A - - - - - - - - - - => - - - - - - - - - - - - - A B - - - - - - - - - - LABEL MOVER_DERECHA_14 COST 1
+- - - - - - - - - A - - - - B - - - - - - - - - - => - - - - - - - - - B - - - - A - - - - - - - - - - LABEL MOVER_ARRIBA_15 COST 1
+- - - - - - - - - - - - - - B - - - - A - - - - - => - - - - - - - - - - - - - - A - - - - B - - - - - LABEL MOVER_ABAJO_15 COST 1
+- - - - - - - - - - - - - A B - - - - - - - - - - => - - - - - - - - - - - - - B A - - - - - - - - - - LABEL MOVER_IZQUIERDA_15 COST 1
+- - - - - - - - - - A - - - - B - - - - - - - - - => - - - - - - - - - - B - - - - A - - - - - - - - - LABEL MOVER_ARRIBA_16 COST 1
+- - - - - - - - - - - - - - - B - - - - A - - - - => - - - - - - - - - - - - - - - A - - - - B - - - - LABEL MOVER_ABAJO_16 COST 1
+- - - - - - - - - - - - - - - B A - - - - - - - - => - - - - - - - - - - - - - - - A B - - - - - - - - LABEL MOVER_DERECHA_16 COST 1
+- - - - - - - - - - - A - - - - B - - - - - - - - => - - - - - - - - - - - B - - - - A - - - - - - - - LABEL MOVER_ARRIBA_17 COST 1
+- - - - - - - - - - - - - - - - B - - - - A - - - => - - - - - - - - - - - - - - - - A - - - - B - - - LABEL MOVER_ABAJO_17 COST 1
+- - - - - - - - - - - - - - - A B - - - - - - - - => - - - - - - - - - - - - - - - B A - - - - - - - - LABEL MOVER_IZQUIERDA_17 COST 1
+- - - - - - - - - - - - - - - - B A - - - - - - - => - - - - - - - - - - - - - - - - A B - - - - - - - LABEL MOVER_DERECHA_17 COST 1
+- - - - - - - - - - - - A - - - - B - - - - - - - => - - - - - - - - - - - - B - - - - A - - - - - - - LABEL MOVER_ARRIBA_18 COST 1
+- - - - - - - - - - - - - - - - - B - - - - A - - => - - - - - - - - - - - - - - - - - A - - - - B - - LABEL MOVER_ABAJO_18 COST 1
+- - - - - - - - - - - - - - - - A B - - - - - - - => - - - - - - - - - - - - - - - - B A - - - - - - - LABEL MOVER_IZQUIERDA_18 COST 1
+- - - - - - - - - - - - - - - - - B A - - - - - - => - - - - - - - - - - - - - - - - - A B - - - - - - LABEL MOVER_DERECHA_18 COST 1
+- - - - - - - - - - - - - A - - - - B - - - - - - => - - - - - - - - - - - - - B - - - - A - - - - - - LABEL MOVER_ARRIBA_19 COST 1
+- - - - - - - - - - - - - - - - - - B - - - - A - => - - - - - - - - - - - - - - - - - - A - - - - B - LABEL MOVER_ABAJO_19 COST 1
+- - - - - - - - - - - - - - - - - A B - - - - - - => - - - - - - - - - - - - - - - - - B A - - - - - - LABEL MOVER_IZQUIERDA_19 COST 1
+- - - - - - - - - - - - - - - - - - B A - - - - - => - - - - - - - - - - - - - - - - - - A B - - - - - LABEL MOVER_DERECHA_19 COST 1
+- - - - - - - - - - - - - - A - - - - B - - - - - => - - - - - - - - - - - - - - B - - - - A - - - - - LABEL MOVER_ARRIBA_2B COST 1
+- - - - - - - - - - - - - - - - - - - B - - - - A => - - - - - - - - - - - - - - - - - - - A - - - - B LABEL MOVER_ABAJO_2B COST 1
+- - - - - - - - - - - - - - - - - - A B - - - - - => - - - - - - - - - - - - - - - - - - B A - - - - - LABEL MOVER_IZQUIERDA_2B COST 1
+- - - - - - - - - - - - - - - A - - - - B - - - - => - - - - - - - - - - - - - - - B - - - - A - - - - LABEL MOVER_ARRIBA_21 COST 1
+- - - - - - - - - - - - - - - - - - - - B A - - - => - - - - - - - - - - - - - - - - - - - - A B - - - LABEL MOVER_DERECHA_21 COST 1
+- - - - - - - - - - - - - - - - A - - - - B - - - => - - - - - - - - - - - - - - - - B - - - - A - - - LABEL MOVER_ARRIBA_22 COST 1
+- - - - - - - - - - - - - - - - - - - - A B - - - => - - - - - - - - - - - - - - - - - - - - B A - - - LABEL MOVER_IZQUIERDA_22 COST 1
+- - - - - - - - - - - - - - - - - - - - - B A - - => - - - - - - - - - - - - - - - - - - - - - A B - - LABEL MOVER_DERECHA_22 COST 1
+- - - - - - - - - - - - - - - - - A - - - - B - - => - - - - - - - - - - - - - - - - - B - - - - A - - LABEL MOVER_ARRIBA_23 COST 1
+- - - - - - - - - - - - - - - - - - - - - A B - - => - - - - - - - - - - - - - - - - - - - - - B A - - LABEL MOVER_IZQUIERDA_23 COST 1
+- - - - - - - - - - - - - - - - - - - - - - B A - => - - - - - - - - - - - - - - - - - - - - - - A B - LABEL MOVER_DERECHA_23 COST 1
+- - - - - - - - - - - - - - - - - - A - - - - B - => - - - - - - - - - - - - - - - - - - B - - - - A - LABEL MOVER_ARRIBA_24 COST 1
+- - - - - - - - - - - - - - - - - - - - - - A B - => - - - - - - - - - - - - - - - - - - - - - - B A - LABEL MOVER_IZQUIERDA_24 COST 1
+- - - - - - - - - - - - - - - - - - - - - - - B A => - - - - - - - - - - - - - - - - - - - - - - - A B LABEL MOVER_DERECHA_24 COST 1
+- - - - - - - - - - - - - - - - - - - A - - - - B => - - - - - - - - - - - - - - - - - - - B - - - - A LABEL MOVER_ARRIBA_25 COST 1
+- - - - - - - - - - - - - - - - - - - - - - - A B => - - - - - - - - - - - - - - - - - - - - - - - B A LABEL MOVER_IZQUIERDA_25 COST 1
+
+GOAL 1 2 3 4 5 6 7 8 9 1B 11 12 13 14 15 16 17 18 19 2B 21 22 23 24 B

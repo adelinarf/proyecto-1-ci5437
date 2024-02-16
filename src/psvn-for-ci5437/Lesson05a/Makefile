@@ -47,6 +47,7 @@ abstractor:
 	@echo "**** Constructing abstractor ..."
 	@$(CXX) $(OPT) ../src/abstractor.cpp ../src/psvn.cpp -o $@
 
+
 %.pdb: abstractor
 	@rm -f `basename $*`.abst `basename $*`.pdb `basename $*`.psvn
 	@echo "**** Running abstractor on `dirname $*`.psvn with `basename $*`.txt ..."
